@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{
+	
+	int a=0,d=0,e=1,f=1,i;
+	char b[10],c[10];
+	printf("Enter first string\n");
+    gets(b);
+	printf("Enter second String\n");
+	gets(c);
+	if(strlen(b)==strlen(c))
+	{
+	for(i=0;i<strlen(b);i++)
+	{
+		a+=b[i];
+		d+=c[i];
+	}
+	if(a==d)
+	{
+		for(i=0;i<3;i++)
+		{
+			e*=b[i];
+			f*=c[i];
+		}
+	}
+	if((e==f)&&(e!=1))
+	{printf("true"); }
+	else 
+	{printf("false");}
+    }
+    else
+    {
+	printf("false");
+    }
+}
