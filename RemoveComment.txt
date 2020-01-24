@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{
+int i;
+    char ar[100];
+    FILE *fp;
+fp=fopen("Gyan.c","r");
+
+if(fp==NULL)
+    printf("Empty File");
+else
+    {
+
+    printf("file is open\n");
+    while(fgets(ar,100,fp)!=NULL)
+        {
+            for(i=0;i<strlen(ar);i++)
+            {
+                  
+                if((ar[i]=='/')&&(ar[i+1]=='/'))
+                {
+                    while(ar[i+=1]!='\n')
+                        continue;
+
+                }
+
+                printf("%c",ar[i]);
+            }
+
+        }
+        fclose(fp);
+
+}
+}
