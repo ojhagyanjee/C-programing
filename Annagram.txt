@@ -29,8 +29,10 @@ void main()
 	if((e==f)&&(e!=1))
 	{printf("true"); }
 	else 
-	{printf("false");}
+	{
+	printf("false");
+	}
     }
     else
-	printf("false");
+        printf("false");
 }
